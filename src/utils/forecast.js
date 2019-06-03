@@ -11,7 +11,7 @@ let forecast = function(latitude,longitude,callback){
 			{
 				callback(body.error);
 			}else{
-				callback(undefined,body.daily.data[0].summary+" it is currently "+body.currently.temperature+" degrees out.There is a "+body.currently.precipProbability*100+" % chance of rain.");
+				callback(undefined,body.daily.data[0].summary+" it is currently "+body.currently.temperature+" degrees out." +' With maximum temperature as '+body.daily.data[0].temperatureHigh+' and minimum temperature as '+body.daily.data[0].temperatureLow+" .There is a "+body.currently.precipProbability*100+" % chance of rain.");
 		}
 	});
 }
